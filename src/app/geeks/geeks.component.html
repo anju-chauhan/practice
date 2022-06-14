@@ -1,0 +1,99 @@
+<div style="height: 50px;width: 100%; background-color: green; border: 2px solid black;">
+  <h3 style="text-align: center;">GeeksForGeeks</h3>
+  
+</div><br>
+<!-- 1st div -->
+
+<div style="height:50px;width:500px;background-color:green; display: flex; margin-left: 300px;">
+  <input  style="margin-left: 10px;margin-top: 15px; width: 240px; margin-left:50px; margin-bottom: 15px;" type="text"[(ngModel)]="userInfo" #box>
+
+    <div><button *ngIf="isUpdate" (click)="myEvent()"style="height:20px;width: 70px;margin-left: 20px; font-size: xx-small;margin-top: 15px;">Update item</button>
+  </div><br>
+
+
+  <div><button *ngIf="!isUpdate" (click)="myEvent()"style="height:20px;width: 70px;margin-left: 20px; font-size: xx-small;margin-top: 15px;">Add item</button>
+  </div><br>
+</div>
+
+
+<!--   <div><button (click)="myEvent()"style="height:20px;width: 70px;margin-left: 20px; font-size: xx-small;">ADD ITEM</button>
+  </div><br> -->
+
+
+  <!-- 1st end -->
+  <!-- 2nd div -->
+
+  <div *ngFor="let data of inputValue" style="height:50px;width:500px; background-color: green; margin-left:300px;display: flex;">
+  <p>{{data.input}}</p>
+  <div>
+  
+  <button (click)="edit(data.input)"style="height:20px; width: 50px; margin-left:10px;font-size: xx-small;">edit</button>
+  </div>
+
+
+    <div>
+      <button (click)="removetask(data.input)"style="height:20px; width: 50px; margin-left:10px;font-size: xx-small;">remove</button>
+    </div>
+<!-- <p>{{data.input}}<button (click)="removetask('data.input')">remove</button></p>
+ -->    
+    
+  </div>
+  <!-- end -->
+
+
+
+<!-- <h3 *ngFor="let list of userInfo">{{list.user}}</h3>
+ -->
+
+
+
+
+
+<!-- 
+  <input  style="margin-left: 10px;margin-top: 15px; width: 250px; margin-left:50px;" type="text" [(ngModel)]="abc" #box>
+<hr> -->
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<hr>
+
+
+<br>
+<br>
+<hr>
+<div *ngIf="green" style="height:100px;width: 500px; background-color: green;">
+
+<div *ngIf="red" style="height:100px;width: 500px; background-color: red;">
+</div>
+</div>
+
+<button (click)="change()">green</button>
+<button (click)="bright()">red</button>
+
+
+
+<!-- 
+student =[
+     {name:'anju',rollno:21,branch:'it',course:'btech'}, 
+       {rollno:21},
+       {beanch:'it'},
+       {course:'btech'``````````
+     ] -->
+
+<!--   abc= {name:'anju',rollno:21,branch:'it',course:'btech'}, 
+ -->
+
+<div *ngFor="let abc of student" >
+
+    <tr>
+    {{abc.name}}
+    {{abc.rollno}}
+    {{abc.branch}}
+    {{abc.course}}
+  </tr>
+</div>
